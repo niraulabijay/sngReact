@@ -23,7 +23,9 @@ function HomeSpecial() {
                       <div
                         className="offer-image-overlay"
                         style={{
-                          backgroundImage: `url(../../assets/images/BREAKFAST.jpg)`,
+                          backgroundImage: `url(${
+                            process.env.PUBLIC_URL + "/images/BREAKFAST.jpg"
+                          } )`,
                         }}
                       ></div>
                     </div>
@@ -44,7 +46,9 @@ function HomeSpecial() {
                     <div
                       className="offer-image-overlay"
                       style={{
-                        backgroundImage: `url(../../assets/images/sauna.jpg)`,
+                        backgroundImage: `url(${
+                          process.env.PUBLIC_URL + "/images/sauna.jpg"
+                        } )`,
                       }}
                     ></div>
                   </div>
@@ -64,9 +68,10 @@ function HomeSpecial() {
                     <div
                       className="offer-image-overlay"
                       style={{
-                        backgroundImage: `url(../../assets/images/parking.jpg)`,
+                        backgroundImage: `url(${
+                          process.env.PUBLIC_URL + "/images/parking.jpg"
+                        } )`,
                       }}
-                    
                     ></div>
                   </div>
                   <div className="offer-content">

@@ -1772,6 +1772,9 @@
 
 .room-photos-slider .room-slide .room-content img {
   width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 426px) {

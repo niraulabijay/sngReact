@@ -32,17 +32,17 @@ function App() {
         <Route exact path="/reach">
           <Reach />
         </Route>
-        <Route exact path="/restaurant">
+        <Route path="/restaurant">
           <Restaurant />
         </Route>
         <Route exact path="/blog">
           <Blog />
         </Route>
-        <Route exact path="/image_gallery">
+        <Route path="/image_gallery">
           <ImageGallery />
         </Route>
         <Route exact path="/room_details">
-         <Room />
+          <Room />
         </Route>
         <Route exact path="/video_gallery">
           <VideoGallery />

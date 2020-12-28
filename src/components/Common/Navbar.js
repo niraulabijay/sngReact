@@ -159,13 +159,13 @@ function Navbar() {
                     &nbsp;|&nbsp;
                   </div>
                   <div className="login">
-                    <div className="login-text">
+                    {/* <div className="login-text">
                       &nbsp;&nbsp;
                       <a href="login.html">
                         <i className="fa fa-user">&nbsp;</i>Login
                       </a>
                       &nbsp;&nbsp;
-                    </div>
+                    </div> */}
                     <div className="book-now">
                       <a href="search-for-room.html">BOOK NOW&nbsp;</a>
                     </div>

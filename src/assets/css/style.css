@@ -17,6 +17,147 @@
   src: url(../fonts/Montserrat-Bold.ttf);
 }
 
+.rdrDateRangeWrapper {
+  z-index: 999;
+  position: absolute !important;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  border: 1px solid beige;
+  margin-top: 15px;
+  background: white none repeat scroll 0% 0% !important;
+  border-radius: 32px !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+  padding: 16px;
+}
+
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrMonthsVertical {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+}
+
+.rdrDateRangeWrapper.active {
+  display: inline-block !important;
+}
+
+.rdrDateRangeWrapper:focus-within {
+  display: inline-block !important;
+}
+
+.option-content.active {
+  display: block !important;
+}
+
+.option-content:focus-within {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .rdrDateRangeWrapper {
+    margin-left: 0px;
+    left: 0;
+    right: 0;
+  }
+  .rdrMonthsVertical {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+.mobileDateBar,
+.occupancyBar {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #fff;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.mobileDateBar .button-container,
+.occupancyBar .button-container {
+  position: absolute;
+  display: inline-block;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+}
+
+.mobileDateBar .button-container span,
+.occupancyBar .button-container span {
+  padding: 8px 30px;
+  background: #3d91ff;
+  border-radius: 5px;
+  color: white;
+}
+
+/* The navigation menu links */
+.mobileDateBar a,
+.occupancyBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.mobileDateBar a:hover,
+.occupancyBar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.mobileDateBar .closebtn,
+.occupancyBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  color: #f44336;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the mobileDateBar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .mobileDateBar,
+  .occupancyBar {
+    padding-top: 15px;
+  }
+  .mobileDateBar a,
+  .occupancyBar a {
+    font-size: 18px;
+  }
+}
+
 .banner {
   background-image: url(../images/hotelroom.jpg);
   background-size: cover;
@@ -643,6 +784,7 @@
   height: auto;
   width: 100vw;
   border: none;
+  border-radius: 0px;
 }
 
 .search-wrapper .modal-dialog .modal-content .close {
@@ -707,6 +849,7 @@
   letter-spacing: 0.5px;
   font-size: 10px;
   font-weight: 500;
+  text-transform: uppercase;
   color: black;
   font-family: system-ui;
 }
@@ -722,6 +865,7 @@
   font-size: 14px;
   letter-spacing: 0.5px;
   padding: 0px;
+  padding-left: 30px;
   width: 100%;
   background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important;
 }
@@ -763,10 +907,6 @@
 .search-wrapper .item select:focus {
   outline: none;
   border-bottom: 1px solid #000;
-}
-
-.search-wrapper .item:hover {
-  background-color: gainsboro;
 }
 
 .search-wrapper .item-calender {
@@ -857,7 +997,7 @@
   .search-wrapper .item input,
   .search-wrapper .item select {
     width: 100%;
-    padding: 0px 0px 4px 15px;
+    padding: 0px 0px 4px 30px;
   }
   .search-wrapper .item:active,
   .search-wrapper .item:focus {
@@ -4271,6 +4411,133 @@ footer .social-media-icons ul li a:hover {
     font-weight: 600;
     font-family: "FontAwesome", sans-serif;
     letter-spacing: 1px;
+  }
+}
+
+.option-content {
+  margin: 0px auto;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  position: absolute;
+  left: -44px;
+  z-index: 9;
+  right: 0;
+  top: 100%;
+  margin-top: 12px;
+  max-height: 280px;
+  background: white none repeat scroll 0% 0% !important;
+  border-radius: 32px !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.option-content .header {
+  background: #f3f3f2;
+  text-transform: capitalize;
+  color: #53565a;
+  text-align: center;
+  padding: 9px 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 16px;
+  font-weight: 600;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+.option-content .header .room-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.option-content .header .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.option-content .header .number #minus {
+  color: #dcdcdc;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .header .number #plus {
+  color: rgba(241, 7, 80, 0.1);
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy {
+  padding: 16px 0px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.option-content .room-occupancy .sub-header {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #202020;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.option-content .room-occupancy .room-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.option-content .room-occupancy .room-content span {
+  font-size: 12px;
+}
+
+.option-content .room-occupancy .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy .number #minus {
+  color: #dcdcdc;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy .number #plus {
+  color: rgba(241, 7, 80, 0.1);
+  cursor: pointer;
+  font-size: 22px;
+}
+@media (max-width: 768px) {
+  .option-content {
+    max-height: 80vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "../Common/SearchBar";
 import Navbar from "../Common/Navbar";
 
 function HomeBanner() {

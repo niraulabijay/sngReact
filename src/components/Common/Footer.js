@@ -23,32 +23,32 @@ function Footer() {
             <ul>
               <li>
                 <a href="#">
-                  <i className="fa fa-facebook"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-pinterest"></i>
+                  <i className="fab fa-pinterest"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa fa-google-plus"></i>
+                  <i className="fab fa-google-plus"></i>
                 </a>
               </li>
             </ul>

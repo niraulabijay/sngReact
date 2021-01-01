@@ -4540,4 +4540,151 @@ footer .social-media-icons ul li a:hover {
     max-height: 80vh;
   }
 }
+
+.checkout_section .my-booking {
+  margin: 10px 0px;
+  padding: 10px 0px;
+  border-bottom: 1.5px solid #777777;
+  border-top: 1.5px solid #777777;
+}
+
+.checkout_section .my-booking .heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.checkout_section .my-booking p {
+  color: #202020;
+  font-size: 14px;
+}
+
+.checkout_section .my-booking h3 {
+  color: #53565a;
+  fill: #53565a;
+  font-size: 14px;
+}
+
+.checkout_section .register-form-container {
+  background-color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.checkout_section .register-form-container .register-form {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+}
+
+.checkout_section .register-form-container .register-form .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout_section .register-form-container .register-form .radio label {
+  margin-bottom: 0px;
+  padding: 0px 10px;
+}
+
+.checkout_section .register-form-container .register-form .form-header h2 {
+  padding: 30px 20px;
+  width: 100%;
+  color: #53565a;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.checkout_section .register-form-container .register-form .header2 p {
+  padding: 0px 20px;
+  margin: 0px;
+}
+
+.checkout_section .register-form-container .register-form form {
+  padding: 0px 20px;
+}
+
+.checkout_section .register-form-container .register-form .form-group {
+  position: relative;
+}
+
+.checkout_section .register-form-container .register-form .form-group .form-control {
+  border: none;
+  width: 100%;
+  border-radius: 0;
+  min-height: 28px;
+  background-color: transparent;
+  border-bottom: 1px solid #dedede;
+}
+
+.checkout_section .register-form-container .register-form .form-group .form-control:focus {
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.checkout_section .register-form-container .register-form .form-group .label-up {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  color: #53565a;
+}
+
+.checkout_section .register-form-container .register-form .form-group a {
+  color: #c20808;
+}
+
+.checkout_section .register-form-container .register-form .form-group .checkspan {
+  margin-left: 10px;
+}
+
+.checkout_section .register-form-container .register-form .check {
+  margin-top: 30px;
+}
+
+.checkout_section .register-form-container .form2 {
+  padding: 10px;
+}
+
+.checkout_section .register-form-container .item {
+  border: 1px solid #b1b3b3;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.checkout_section .register-form-container .item img {
+  margin-bottom: 10px;
+}
+
+.checkout_section .register-form-container .item p {
+  font-size: 14px;
+  margin-bottom: 0px;
+  color: #686868;
+  font-weight: 700;
+}
+
+.checkout_section .register-form-container .item:hover {
+  border: 1px solid #c20808;
+}
+
+.checkout_section .form-btn {
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.checkout_section .form-btn a {
+  display: block;
+  background-color: #c20808;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.checkout_section .form-btn a:hover {
+  text-decoration: none;
+  background-color: #790505;
+}
 /*# sourceMappingURL=style.css.map */

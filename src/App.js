@@ -14,6 +14,7 @@ import Reach from "./pages/Reach";
 import Restaurant from "./pages/Restaurant";
 import Team from "./pages/Team";
 import Room from "./pages/Room";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route exact path="/packages">
           <Packages />
+        </Route>
+        <Route exact path="/checkout">
+         <Checkout/>
         </Route>
         <Route exact path="/">
           <Home />

@@ -11,7 +11,7 @@ function Banner({ title, bread }) {
             <p class="banner-title">{title}</p>
             <div class="banner-subpage">
               <a href="index.html">
-                Home&nbsp;<i class="fa fa-chevron-right"></i>&nbsp;
+                Home&nbsp;<i class="fas fa-chevron-right"></i>&nbsp;
               </a>
               <span>{bread}</span>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function HomeRooms() {
+function HomeRooms({rooms}) {
   return (
     <>
       <div className="our-rooms">
@@ -16,52 +16,23 @@ function HomeRooms() {
         <div className="container">
           <div className="our-rooms-details-wrapper">
             <div className="our-rooms-details">
+              { rooms && rooms.map((room)=>
               <div className="hotel-room">
                 <div className="hotel-room-image">
                   <div className="hotel-room-overlay"></div>
-                  <a href="#"></a>
-                  <div className="hotel-room-price">
-                    <span style= {{fontSize : "10px" , color : "orange"}}>FROM:</span>
-                    <span style={{fontSize : "14px" , color : "orange"}}>Rs. 1000</span>
-                    <br />
-
-                      <span style={{fontSize : "14px" , color : "white", fontWeight: "700"}}>
-                      GRAND DELUXE
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="hotel-room">
-                <div className="hotel-room-image">
-                  <div className="hotel-room-overlay"></div>
-                  <a href="#"></a>
-                  <div className="hotel-room-price">
-                    <span style= {{fontSize : "10px" , color : "orange"}}>FROM:</span>
-                    <span style={{fontSize : "14px" , color : "orange"}}>Rs. 1000</span>
-                    <br />
-
-                      <span style={{fontSize : "14px" , color : "white", fontWeight:"700"}}>
-                      SUPERIOR DELUXE
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hotel-room">
-                <div className="hotel-room-image">
-                  <div className="hotel-room-overlay"></div>
-                  <a href="#"></a>
+                  {/* <a href="#"></a> */}
                   <div className="hotel-room-price">
                    <span style= {{fontSize : "10px" , color : "orange"}}>FROM:</span>
-                    <span style={{fontSize : "14px" , color : "orange"}}>Rs. 1000</span>
+                    <span style={{fontSize : "14px" , color : "orange"}}>{room.price}</span>
                     <br />
 
                     <span style={{fontSize : "14px" , color : "white", fontWeight:"700"}}>
-                      DELUXE KING ROOM
+                      {room.title}
                     </span>
                   </div>
                 </div>
               </div>
+              )}
             </div>
           </div>
         </div>

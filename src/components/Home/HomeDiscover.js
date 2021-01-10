@@ -12,11 +12,11 @@ function HomeDiscover() {
                 <p className="discover-location-title">
                   Discover
                   <br />
-                  Our Locations
+                  Our Hotel
                 </p>
                 <p className="discover-location-text">
-                  A wonderful serenity has taken my entire soul, like sweet
-                  morning spring which I enjoy with my whole.
+                  A lovely place to relax and enjoy the serenity of the city and away 
+                  from the crowd of Kathmandu.
                 </p>
               </div>
             </div>
@@ -40,12 +40,9 @@ function HomeDiscover() {
                   <img src={process.env.PUBLIC_URL + "/images/bar-icon.JPG"} />
                   <p className="facility-title">Bar and Restaurant</p>
                   <p className="facility-text">
-                    A wonderful serenity has taken my entire soul, like sweet
-                    morning spring which I enjoy with my whole.
+                     Enjoy different types of liquors and drinks alongside best cuisine
+                     prepared by our chef. 
                   </p>
-                  <a href="restaurant.html">
-                    READ MORE &nbsp; <i className="fa fa-arrow-right"></i>
-                  </a>
                 </div>
               </div>
               <div className="col-md-4">
@@ -53,14 +50,11 @@ function HomeDiscover() {
                   <img
                     src={process.env.PUBLIC_URL + "/images/spa-salon-icon.JPG"}
                   />
-                  <p className="facility-title">Spa and Salon</p>
+                  <p className="facility-title">Parking Space</p>
                   <p className="facility-text">
-                    A wonderful serenity has taken my entire soul, like sweet
-                    morning spring which I enjoy with my whole.
+                    Plenty of space for your vehicles to park for over night with 
+                    security built in for your ride.
                   </p>
-                  <a href="#">
-                    READ MORE &nbsp; <i className="fa fa-arrow-right"></i>
-                  </a>
                 </div>
               </div>
 
@@ -69,14 +63,11 @@ function HomeDiscover() {
                   <img
                     src={process.env.PUBLIC_URL + "/images/swimming-icon.JPG"}
                   />
-                  <p className="facility-title">Swimming Pool</p>
+                  <p className="facility-title">Meeting Hall</p>
                   <p className="facility-text">
-                    A wonderful serenity has taken my entire soul, like sweet
-                    morning spring which I enjoy with my whole.
+                   A entire place for meeting hall that can be used for occasions like
+                   office meetings & birthday parties.
                   </p>
-                  <a href="#">
-                    READ MORE &nbsp; <i className="fa fa-arrow-right"></i>
-                  </a>
                 </div>
               </div>
             </div>

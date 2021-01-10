@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import HomeBanner from "../components/Home/HomeBanner";
 import HomeWelcome from "../components/Home/HomeWelcome";
 import HomeDiscover from "../components/Home/HomeDiscover";
@@ -8,24 +8,50 @@ import HomeNewsletter from "../components/Home/HomeNewsletter";
 import HomeSpecial from "../components/Home/HomeSpecial";
 import HomeTestimonial from "../components/Home/HomeTestimonial";
 import Footer from "../components/Common/Footer";
+import axiosInstance from "../helper/axios";
+import Axios from "axios";
 
 function Home() {
-
- 
-
+  const [rooms, setRooms] = useState()
+  const [testimonials, setTestimonials] = useState()
+  const [banner, setBanner] = useState()
+  const [welcome, setWelcome] = useState()
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get(`/homepage`, {
+          cancelToken: source.token,
+        });
+        setRooms((await response).data.rooms);
+        setTestimonials((await response).data.testimonials)
+        setBanner((await response).data.data)
+        setWelcome((await response).data.welcome)
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+  console.log(rooms, 'hello')
   return (
     <div id="main">
-      <HomeBanner />
-      <HomeWelcome />
+      <HomeBanner banner={banner}/>
+      <HomeWelcome welcome={welcome}/>
       <HomeDiscover />
       <HomeSummer />
-      <HomeRooms />
+      <HomeRooms rooms={rooms} />
       <HomeNewsletter />
       <HomeSpecial />
       <div className="container">
         <div className="vertical-divider"></div>
       </div>
-      <HomeTestimonial />
+      <HomeTestimonial  testimonials={testimonials}/>
     </div>
   );
 }

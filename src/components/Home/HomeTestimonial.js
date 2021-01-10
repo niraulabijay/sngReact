@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-function HomeTestimonial() {
+function HomeTestimonial({testimonials}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,6 +14,7 @@ function HomeTestimonial() {
       <div className="testimonial">
         <div className="testimonial-slide">
           <Slider {...settings}>
+            {testimonials && testimonials.map((testimonial)=>
             <div className="testimonial-content">
               <div
                 className="person-image"
@@ -24,68 +25,18 @@ function HomeTestimonial() {
                 }}
               ></div>
               <div className="person-details">
-                <p>Karin Thomas</p>
-                Manager Asian Discovery
+                <p>{testimonial.title}</p>
+                {testimonial.designation}
               </div>
               <div className="testimonial-text">
                 <p>
-                  <em>
-                    'Sitting on the high cliffs of the Amalfi Coast, Casa
-                    Angelina offers a sublime slice of modern minimalism on the
-                    Mediterranean, with an emphasis on elegant. Leverage agile
-                    frameworks to provide a robust synopsis.'
+                  <em dangerouslySetInnerHTML={{__html: testimonial.description}}>
                   </em>
                 </p>
               </div>
             </div>
-            <div className="testimonial-content">
-              <div
-                className="person-image"
-                style={{
-                  backgroundImage: `url(${
-                    process.env.PUBLIC_URL + "/images/person-testimonial.jpg"
-                  } )`,
-                }}
-              ></div>
-              <div className="person-details">
-                <p>Karin Thomas</p>
-                Manager Asian Discovery
-              </div>
-              <div className="testimonial-text">
-                <p>
-                  <em>
-                    'Sitting on the high cliffs of the Amalfi Coast, Casa
-                    Angelina offers a sublime slice of modern minimalism on the
-                    Mediterranean, with an emphasis on elegant. Leverage agile
-                    frameworks to provide a robust synopsis.'
-                  </em>
-                </p>
-              </div>
-            </div>
-            <div className="testimonial-content">
-              <div
-                className="person-image"
-                style={{
-                  backgroundImage: `url(${
-                    process.env.PUBLIC_URL + "/images/person-testimonial.jpg"
-                  } )`,
-                }}
-              ></div>
-              <div className="person-details">
-                <p>Karin Thomas</p>
-                Manager Asian Discovery
-              </div>
-              <div className="testimonial-text">
-                <p>
-                  <em>
-                    'Sitting on the high cliffs of the Amalfi Coast, Casa
-                    Angelina offers a sublime slice of modern minimalism on the
-                    Mediterranean, with an emphasis on elegant. Leverage agile
-                    frameworks to provide a robust synopsis.'
-                  </em>
-                </p>
-              </div>
-            </div>
+          
+            )}
           </Slider>
         </div>
       </div>

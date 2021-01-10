@@ -1,8 +1,10 @@
 import React from "react";
 import SearchBar from "../Common/SearchBar";
 import Navbar from "../Common/Navbar";
+import {Link} from "react-router-dom";
 
-function HomeBanner() {
+function HomeBanner({banner}) {
+  console.log(banner, 'banner')
   return (
     <div>
       <div className="banner">
@@ -12,12 +14,10 @@ function HomeBanner() {
             <p className="banner-subtitle">BEST HOTEL AND RESORT</p>
             <p className="banner-title">HOTEL SNG</p>
             <p className="banner-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              voluptatibus natus voluptas mollitia iusto ullam culpa consectetur
-              impedit itaque debitis
+              {banner && banner.banner_text}
             </p>
             <div className="room-suite-link">
-              <a href="#">ROOMS SUITES</a>
+              <Link to="/contact">Contact</Link>
             </div>
           </div>
 

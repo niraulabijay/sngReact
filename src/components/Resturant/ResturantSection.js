@@ -1,8 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link, Switch, Route } from "react-router-dom";
+import axiosInstance from "../../helper/axios";
 import RestaurantTab from "./RestaurantTab";
+import Axios from 'axios'
 
 function ResturantSection() {
+  const [foods, setFoods] = useState()
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get(`/teams`, {
+          cancelToken: source.token,
+        });
+        setFoods((await response).data.foodCategories);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+
   return (
     <div>
       <div className="restaurant-section">
@@ -15,7 +38,7 @@ function ResturantSection() {
           <div class="restaurant-menu">
             {/* <!-- Tab links --> */}
             <div class="tab">
-              <Link to={"/restaurant"}>
+              <Link to={"/restaurant/breakfast"}>
                 <button className="active">BREAKFAST</button>
               </Link>
               <Link to={"/restaurant/lunch"}>
@@ -35,7 +58,7 @@ function ResturantSection() {
             {/* <!-- Tab content --> */}
             <div class="menu-tab-content-all">
               <Switch>
-                <Route exact path={"/restaurant"}>
+                <Route exact path={"/restaurant/:breakfast?"}>
                   <RestaurantTab name="Breakfast" />
                 </Route>
                 <Route exact path={"/restaurant/lunch"}>
